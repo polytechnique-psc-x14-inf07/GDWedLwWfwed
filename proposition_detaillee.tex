@@ -45,7 +45,6 @@
 
 \section{Introduction du sujet}
 
-	\stepcounter{subsection}
 	\vrac{\subsection{Enjeux et motivations}
 		Un homme entre dans un hall d’aéroport. Il pose ses valises et s’assoit en attendant l’embarquement. Son  vol  est  en  direction  de  New-York  part  dans  40 minutes. Imitant les gens autour de lui, il sort son smartphone. Il envoie un dernier message à sa femme avant de décoller puis en profite pour prévenir sa maîtresse de son heure d’arrivée. Il consulte alors les derniers résultats sportifs de son équipe de  football  préférée  puis  lit  un  e-mail  de  son  patron. Bien  sûr,  pour  éviter  de consommer son forfait internet, il s’est  connecté  au  réseau  \newcommand{\wifi}{Wi-Fi} \wifi{}  gratuit  proposé dans tous les aéroports, dans tous les lieux publics.
 		
@@ -73,11 +72,11 @@
 	
 	La plupart des smartphones utilisent des applications pour sécuriser les données dans le téléphone, comme par exemple les antivirus. Le problème est parfois que l'antivirus ne travaille pas à un niveau logiciel suffisamment bas pour totalement sécuriser le mobile. Il existe aussi l'option consistant à crypter les données stockées dans le téléphone.
 	
-	Pour sécuriser les données transmises via \wifi{}, SMS ou \newcommand{\bluetooth}{Bluetooth} \bluetooth{}, il y a des applications servant à crypter les messages, comme par exemple \href{http://www.whispersystems.org/#encrypted_texts}{TextSecure}. On utilise aussi le SSL\footnote{Secure Sockets Layer} pour crypter le trafic de certaines applications. Ces solutions sont locales et souvent payantes ou contraignantes.
+	Pour sécuriser les données transmises via \wifi{}, SMS ou\newcommand{\bluetooth}{Bluetooth} \bluetooth{}, il y a des applications servant à crypter les messages, comme par exemple \href{http://www.whispersystems.org/#encrypted_texts}{TextSecure}. On utilise aussi le SSL\footnote{Secure Sockets Layer} pour crypter le trafic de certaines applications. Ces solutions sont locales et souvent payantes ou contraignantes.
 
 	\vrac{
 	\subsection{Objectifs}
-		Notre objectif final est double. Nous voulons dans un premier temps mettre en  évidence  la  possibilité  d’obtenir  des  informations  censées  être  sécurisées. Depuis un ordinateur portable, notre but est «d’espionner» un appareil \Android{} connecté au même \wifi{}. Nous pourrons observer les différentes failles de sécurité grâce à cette première étape. Cette  démarche débutera par une analyse de ce qui peut être récupérer «passivement» par l’ordinateur, puis nous tenterons d’accéder à encore plus de données en organisant une attaque sur l’appareil test.
+		Notre objectif final est double. Nous voulons dans un premier temps mettre en  évidence  la  possibilité  d’obtenir  des  informations  censées  être  sécurisées. Depuis un ordinateur portable, notre but est «d’espionner» un appareil \Android{} connecté au même réseau \wifi{}. Nous pourrons observer les différentes failles de sécurité grâce à cette première étape. Cette  démarche débutera par une analyse de ce qui peut être récupérer «passivement» par l’ordinateur, puis nous tenterons d’accéder à encore plus de données en organisant une attaque sur l’appareil test.
 		
 		Dans un deuxième temps, nous utiliserons l’expérience accumulée dans la phase «hacking» afin de créer, sûrement sous forme d’application, une façon de mieux  protéger  les  données  personnelles  contenues  sur  les  smartphones.  Notre objectif ici n’est pas de rendre le smartphone invulnérable à toute attaque, mais au  moins  d’encapsuler  les  informations  de  telle  sorte  à  ce  que  l’accès  à  celles-ci soient relativement plus compliqué pour un intrus.}
 
@@ -105,11 +104,11 @@
 		
 		Nous avons convenu d'utiliser la plateforme de bloc-notes collaborative \href{https://framapad.org}{framapad} en guise de tableau d'affichage nous permettant de partager les informations et notes importantes tout au long de l'année. Il permet d'afficher les contributions de chacun tout en les distinguant, le tout en temps réel. Le même développeur\footnote{Framasoft, association loi 1901} propose d'ailleurs un service d'organisation de rendez-vous, \href{https://framadate.org}{framadate}, que nous utilisons aussi pour simplifier le choix des dates de réunion afin d'être tous présents aux rendez-vous.
 		
-		Nous ne pourrons tout de même pas nous réunir chaque fois que nous en aurons besoin, compte tenu des emplois du temps de chacun. Cette impossibilité éventuelle d'être physiquement réunis pour discuter du projet a été anticipée, et nous avons mis en place un canal — ou salon — de discussion IRC\footnote{Internet Relay Chat} permettant de mettre en place d'éventuelles réunions virtuelles de façon simple.
+		Nous ne pourrons \vrac{tout de même$\rightarrow$cependant} pas nous réunir chaque fois que nous en aurons besoin, compte tenu des emplois du temps de chacun. Cette impossibilité éventuelle d'être physiquement réunis pour discuter du projet a été anticipée, et nous avons mis en place un canal — ou salon — de discussion IRC\footnote{Internet Relay Chat} permettant de mettre en place d'éventuelles réunions virtuelles de façon simple.
 				
 		\subsubsection{Distribution des rôles}
 		
-		\paragraph{"Chef" de groupe. } Pour faciliter le fonctionnement du groupe, \textcolor{bleu303}{Guillaume \textsc{Vizier}} sera chargé tout au long de l'année de jouer un rôle de coordinateur dans le groupe. C'est l'expéditeur privilégié des mails d'informations, et il se charge en général d'organiser les rendez-vous ou de distribuer certaines tâches. Contrairement à ce que laisse penser l'appellation, il ne s'agit pas d'une position d'autorité dans la mesure où les membres du groupe travaillent en collaboration : ce rôle consiste en particulier à clarifier et transmettre des décisions prises en commun, et à faciliter la coordination du groupe.
+		\paragraph{"Chef" de groupe. } Pour faciliter le fonctionnement du groupe, \textcolor{bleu303}{Guillaume \textsc{Vizier}} sera chargé tout au long de l'année de jouer un rôle de coordinateur dans le groupe. C'est l'expéditeur privilégié des mails d'informations. Contrairement à ce que laisse penser l'appellation, il ne s'agit pas d'une position d'autorité dans la mesure où les membres du groupe travaillent en collaboration : ce rôle consiste en particulier à clarifier et transmettre des décisions prises en commun, et à faciliter la coordination du groupe.
 		
 		\paragraph{Édition des documents. } Pour assurer la cohérence et l'uniformité des documents produits par le groupe, \textcolor{bleu303}{Clément \textsc{Durand}} sera chargé de mettre en commun les contributions à chaque document. Cela permet principalement de produire des compte-rendus de réunion communs, de rassembler les informations constituant chaque document, et de se charger de la mise en page des documents après avoir collecté toutes les parties.
 		
@@ -117,7 +116,7 @@
 	
 	\subsection{Échéancier}
 	
-	À partir des échéances imposées par la Direction des Études, de notre objectif principal et des informations que nous avons sur l'objet d'étude, nous avons mis en place une chronologie prévisionnelle destinée à préciser nos objectifs et notre organisation. Cette liste d'objectifs intermédiaires et de tâches permettra de donner une ligne de conduite. Elle peut toutefois être révisée au fur et à mesure, pour être adaptée à notre progression et à d'éventuels changements d'objectifs dûs à nos découvertes ou difficultés. Elle a l'avantage de clarifier la vision qu'a chacun du projet, et de tous nous mettre d'accord sur ce que nous souhaitons précisément faire.
+	À partir des échéances imposées par la Direction des Études, de notre objectif principal et des informations que nous avons sur l'objet d'étude, nous avons mis en place une chronologie prévisionnelle destinée à préciser nos objectifs et notre organisation. Cette liste d'objectifs intermédiaires et de tâches permettra de donner une ligne de conduite. Elle peut toutefois être révisée au fur et à mesure, pour être adaptée à notre progression et à d'éventuels changements d'objectifs dus à nos découvertes ou difficultés. Elle a l'avantage de clarifier la vision qu'a chacun du projet, et de tous nous mettre d'accord sur ce que nous souhaitons précisément faire.
 	
 		\subsubsection{Objectifs intermédiaires du groupe}
 		
@@ -125,15 +124,15 @@
 		
 		Nous souhaitons commencer par comprendre les failles « naturellement » présentes, c'est-à-dire les informations divulguées (fuites) par un téléphone ou tout autre dispositif, sans qu'une personne tierce n'agisse pour faciliter ces fuites. L'objectif est d'être capable de capturer ce qu'il se passe sur un réseau, pour pouvoir observer ce que les appareils diffusent dans leurs échanges. Il serait alors intéressant de constater l'importance des fuites, pour mettre en évidence le manque de sécurité au travers de toutes les informations non cryptées qui circulent dans un réseau, qui sont transmises par des applications.
 		
-		La suite logique des choses nous conduirait à étudier de façon statistique ces données présentes en quantité très importante, étudier la force du cryptage de celles qui sont cryptées, pour être capable de mettre en évidence quel type d'information est directement accessible et diffusé par nos appareils de communication. Enfin, serait évidemment instructif d'étudier les protocoles d'échange utilisés dans les réseaux pour en apprendre plus sur ce que peut faire un hacker, ce à quoi il peut avoir accès. Le DNS poisoning est un des exemples d'attaque dangereuse pour les utilisateurs, et pourtant simple pour les hackers.
+		La suite logique des choses nous conduirait à étudier de façon statistique ces données présentes en quantité très importante, étudier la force du cryptage de celles qui sont cryptées, pour être capable de mettre en évidence quel type d'information est directement accessible et diffusé par nos appareils de communication. Enfin, \vrac{ajout : il} serait évidemment instructif d'étudier les protocoles d'échange utilisés dans les réseaux pour en apprendre plus sur ce que peut faire un hacker, ce à quoi il peut avoir accès. Le DNS poisoning est un des exemples d'attaque dangereuse pour les utilisateurs, et pourtant simple pour les hackers.
 		
 		L'objectif de cette partie est de mettre en évidence et de faire constater la présence de risques importants en terme de vie privée, que ce soit sur les réseaux sociaux ou même sur des applications n'ayant a priori aucun lien avec nos informations personnelles. Cela justifie notre choix d'objectif en mettant en évidence l'utilité de ce que nous souhaitons produire, et sera un moyen pratique de s'instruire sur le domaine que nous étudions, d'apprendre les nouveaux langages dont nous avons besoin et le fonctionnement des protocoles que nous rencontrerons.
 		
 		\paragraph{Seconde partie. } À partir de cette étude des failles des appareils de communication de la vie courante, l'objectif principal du groupe est de combler ces failles dans certains cas, qui seront précisés ci-après.
 		
-		Nous avons décidé de nous concentrer — au moins dans un premier temps — sur les appareils Android. Essentiellement des téléphones portables, ils diffusent des informations très variées en quantité impressionnante, et présentent d'importantes failles. L'objectif de cette partie est donc de réduire ou combler certaines de ces failles.
+		Nous avons décidé de nous concentrer — au moins dans un premier temps — sur les appareils \Android{}. Essentiellement des téléphones portables, ils diffusent des informations très variées en quantité impressionnante, et présentent d'importantes failles. L'objectif de cette partie est donc de réduire ou combler certaines de ces failles.
 		
-		Dans un premier temps, nous souhaitons réaliser une application dont le fonctionnement principal importe peu, mais dont les données sont sécurisées. Le but est d'avoir une application qui respecte la vie privée de l'utilisateur, et protège les données qui lui sont confiées. Cela nous permettra d'étudier la possibilité de combler le manque de \emph{cloisonnement} entre les applications installées sur un téléphone, lequel manque est source de nombreuses fuites au sein même du téléphone. L'utilisateur ne veut en effet pas que les données qu'il confie à une applications soient récupérées par une autre sans son accord explicite, et le but de cette étape est de répondre à ce problème. Une fois les données sécurisées au sein du téléphone, le but est de sécuriser les échanges de données.
+		Dans un premier temps, nous souhaitons réaliser une application dont le fonctionnement principal importe peu, mais dont les données sont sécurisées. Le but est d'avoir une application qui respecte la vie privée de l'utilisateur, et protège les données qui lui sont confiées. Cela nous permettra d'étudier la possibilité de combler le manque de \emph{cloisonnement} entre les applications installées sur un téléphone, lequel manque est source de nombreuses fuites au sein même du téléphone. L'utilisateur ne veut en effet pas que les données qu'il confie à une application soient récupérées par une autre sans son accord explicite, et le but de cette étape est de répondre à ce problème. Une fois les données sécurisées au sein du téléphone, le but est de sécuriser les échanges de données.
 		
 		À ce moment nous aurons alors produit une application simple mais a priori plus sécurisée que ce que nous aurons constaté auparavant sur la plupart des applications. Le but est ensuite de généraliser cette sécurisation aux autres applications. Il s'agira alors de créer une application ou un programme qui protègera les données de l'utilisateur contre les failles que nous avons découvertes. Cette application pourra par exemple crypter les échanges d'informations entre utilisateurs soucieux de leur sécurité, protéger le téléphone contre d'éventuelles irrégularités de comportement du réseau, limiter et mieux contrôler les informations qui sont diffusées de façon non cryptée, etc. Cette étape, qui est essentiellement notre objectif principal, est conséquente et nous procéderons par étapes comme suit.
 		
@@ -148,7 +147,7 @@
 		
 		\subsubsection{Confrontation aux échéances}
 		
-		Ces objectifs sont à intégrer dans le calendrier de déroulement du PSC prévu par la Direction des Études.
+		Ces objectifs sont à intégrer dans le calendrier de déroulement du \vrac{Projet Scientifique Collectif} prévu par la Direction des Études.
 		
 		\paragraph{Réunion de lancement. } Cette réunion doit avoir lieu au plus tard le 20 novembre 2015. L'objectif est d'avoir à ce stade une bonne connaissance du sujet en ayant commencé la première étape et étudié les différents domaines que nous allons rencontrer. Une meilleure connaissance de ce que nous étudions nous permettra d'avoir une bonne vision du sujet, de ce que nous pouvons faire, et d'être le plus réalistes et efficaces possible.
 		
@@ -160,13 +159,13 @@
 	
 		\subsection{Moyens nécessaires}
 
-		Notre sujet concernant la sécurité du système d'exploitation Android à travers ses communications (particulièrement en \wifi{}), nous allons avoir besoin de plusieurs éléments pour compléter nos objectifs.
+		Notre sujet concernant la sécurité du système d'exploitation \Android{} à travers ses communications (particulièrement en \wifi{}), nous allons avoir besoin de plusieurs éléments pour compléter nos objectifs.
 		
 		La liste n'est pas exhaustive, et au fur et à mesure de notre avancement il est fortement probable que de nouveaux logiciels ou même du matériel supplémentaire soient nécessaires.
 		
-		Bien évidemment nous aurons besoin de téléphones ou tablettes supportant Android, nous prévoyons dans un premier temps d'employer nos propres appareils, mais nous n'excluons pas de demander des emprunts ponctuels au laboratoire si le besoin s'en fait sentir.
+		Bien évidemment nous aurons besoin de téléphones ou tablettes supportant \Android{}, nous prévoyons dans un premier temps d'employer nos propres appareils, mais nous n'excluons pas de demander des emprunts ponctuels au laboratoire si le besoin s'en fait sentir.
 		
-		Ensuite pour la partie « Mise en évidence de vulnérabilités », nous allons avoir besoin de nombreux logiciels (notamment des sniffeurs de paquets). Comme nous essayons en partie de montrer que ces vulnérabilités sont accessibles à tout individu averti mais sans expertise particulière, la plupart de ces logiciels sont gratuits et même parfois \emph{opensource}\footnote{Code source ouvert}. Pour effectuer les tests, nos ordinateurs personnels seront amplement suffisants pour le début de nos objectifs.
+		Ensuite pour la partie « Mise en évidence de vulnérabilités », nous allons avoir besoin de nombreux logiciels (notamment des sniffeurs de paquets). Comme nous essayons en partie de montrer que ces vulnérabilités sont accessibles à tout individu averti mais sans expertise particulière, la plupart de ces logiciels sont gratuits et même parfois \emph{opensource}\footnote{Code source \vrac{ouvert$\rightarrow$accessible à tous/disponible sur le web}. Pour effectuer les tests, nos ordinateurs personnels seront amplement suffisants pour le début de nos objectifs.
 		
 		Enfin, tout au long de notre progression nous allons avoir besoin de documentation. Évidemment, étant donné le caractère sensible de ce que nous comptons effectuer, il est relativement difficile de trouver des ressources, et encore plus difficile de trouver des ressources à jour. En effet le domaine de la sécurité informatique est en développement constant et de nombreuses failles sont corrigées chaque jour.
 
