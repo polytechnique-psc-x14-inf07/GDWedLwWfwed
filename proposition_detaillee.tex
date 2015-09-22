@@ -3,7 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[frenchb]{babel}
 
-\usepackage{lmodern} % je suis un çorde \o/
+\usepackage{lmodern}
 \usepackage{textcomp}
 \usepackage{ifthen} \usepackage{amsmath} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{graphicx}
 \usepackage{enumitem}
@@ -46,10 +46,18 @@
 \section{Introduction du sujet}
 
 	\stepcounter{subsection}
-	
+	\vrac{\subsection{Enjeux et motivations}
+		Un homme entre dans un hall d’aéroport. Il pose ses valises et s’assoit en attendant l’embarquement. Son  vol  est  en  direction  de  New-York  part  dans  40 minutes. Imitant les gens autour de lui, il sort son smartphone. Il envoie un dernier message à sa femme avant de décoller puis en profite pour prévenir sa maîtresse de son heure d’arrivée. Il consulte alors les derniers résultats sportifs de son équipe de  football  préférée  puis  lit  un  e-mail  de  son  patron. Bien  sûr,  pour  éviter  de consommer son forfait internet, il s’est  connecté  au  réseau  \newcommand{\wifi}{Wi-Fi} \wifi{}  gratuit  proposé dans tous les aéroports, dans tous les lieux publics.
+		
+		Il ne sait pas qu’en faisant cela, il vient de vous autoriser l’accès à toutes ses données   personnelles:   répertoire,   historique   de   messagerie,   historique   de navigation, voire même ses coordonnées bancaires. Imaginez que vous arriviez à récupérer ces informations. Imaginez tout ce que vous pourriez en retirer. Comme le  confirme  les  dernières  études  à ce  sujet  depuis  maintenant  quasiment  5  ans, notre  smartphone  contient  en  moyenne  plus  d’informations  sur  votre  vie personnelle et professionnelle que n’importe quel autre appareil. Vous venez donc de récupérer assez d’éléments pour faire à peu près ce que vous voulez. Il suffit que cette personne ait un poste plutôt important dans une entreprise pour réaliser que vous détenez des informations précieuses pour un public visé. Vous pouvez même envisagez de faire chanter cette personne. 
+		
+		Imaginez  maintenant  la situation  opposée.  Vous  voilà  avec  votre  téléphone portable à la Gare du Nord pour un rendez-vous important à Londres. Et voilà que vous vous connectez au \wifi{}. Toutes vos données viennent d’être récupérées par un individu qui pourra s’en servir comme bon lui semble. 
+		
+		Par  ces  quelques  situations, retranscrites  maintes  fois  dans  les  films d’espionnage, on peut avoir un premier aperçu de ce qu’apporterait la capacité à récupérer les données se trouvant sur un smartphone, jusque parce que celui-ci est connecté en \wifi{}. A partir de cette constatation, nous avons décidé de tester les limites de sécurité d’un smartphone, pour pouvoir par la suite trouver des moyens de le renforcer face à des attaques extérieures.}
+		
 	\subsection{État de l'art}
 	
-	Il est possible d'obtenir des données, telles que des mots de passe, via des logiciels comme \newcommand{\wireshark}{\href{https://www.wireshark.org}{WireShark}} \wireshark{} qui écoutent le réseau \newcommand{\wifi}{Wi-Fi} \wifi{} sur lequel l'appareil cible et celui qui écoute sont connectés. Avec \wireshark{} on peut écouter tous les paquets IP de l'autre utilisateur connecté au \wifi{} et on sauvegarde toute l'information qu'il transmet dans le but d'obtenir des informations de tout type. On peut exploiter certains protocoles qui transmettent des données  peu ou pas cryptées et ainsi décoder les messages qu'ils véhiculent. Des attaques possibles sont: 
+	Il est possible d'obtenir des données, telles que des mots de passe, via des logiciels comme \newcommand{\wireshark}{\href{https://www.wireshark.org}{WireShark}} \wireshark{} qui écoutent le réseau \wifi{} sur lequel l'appareil cible et celui qui écoute sont connectés. Avec \wireshark{} on peut écouter tous les paquets IP de l'autre utilisateur connecté au \wifi{} et on sauvegarde \vrac{toute} l'information qu'il transmet dans le but d'obtenir des informations de tout type. On peut exploiter certains protocoles qui transmettent des données  peu ou pas cryptées et ainsi décoder les messages qu'ils véhiculent. Des attaques possibles sont: 
 	
 	\begin{itemize}\setlength{\parskip}{0pt}
 		\item DNS\footnote{Domain Name System, service permettant de traduire un nom de domaine en informations de plusieurs types qui y sont associées (adresses IP, etc.)} Poisoning : le hackeur se fait passer pour un serveur DNS. Lorsque l'utilisateur envoie une requête au serveur, il reçoit une réponse éventuellement manipulée et ne le sait pas. 
@@ -59,7 +67,7 @@
 		\item AP Phishing\footnote{Hameçonnage} : consiste en l'imitation d'un serveur web, par exemple pour se faire passer pour la page d'un site bancaire et récupérer des mots de passe, etc.
 	\end{itemize}
 
-	Il est également possible de faire des attaques via SMS ou MMS pour hacker le portable. L'attaque consiste en l'envoi d'un message avec une vidéo qui exploite la vulnérabilité de la librairie \verb!stagefright! sur Android, qui est une librairie utilisée pour traiter les fichiers multimédia.
+	Il \vrac{est$\rightarrow$était} également possible de faire des attaques via SMS ou MMS pour hacker le portable. L'attaque consiste en l'envoi d'un message avec une vidéo qui exploite la vulnérabilité de la librairie \verb!stagefright! sur \newcommand{\Android}{Android} \Android{}, qui est une librairie utilisée pour traiter les fichiers multimédia.\vrac{(ajout) Cette faille a été découverte et comblée récemment.}
 
 	Des procédés existent déjà pour sécuriser les échanges et les données qui sont mises en danger par les éléments précédents.
 	
@@ -67,6 +75,11 @@
 	
 	Pour sécuriser les données transmises via \wifi{}, SMS ou \newcommand{\bluetooth}{Bluetooth} \bluetooth{}, il y a des applications servant à crypter les messages, comme par exemple \href{http://www.whispersystems.org/#encrypted_texts}{TextSecure}. On utilise aussi le SSL\footnote{Secure Sockets Layer} pour crypter le trafic de certaines applications. Ces solutions sont locales et souvent payantes ou contraignantes.
 
+	\vrac{
+	\subsection{Objectifs}
+		Notre objectif final est double. Nous voulons dans un premier temps mettre en  évidence  la  possibilité  d’obtenir  des  informations  censées  être  sécurisées. Depuis un ordinateur portable, notre but est «d’espionner» un appareil \Android{} connecté au même \wifi{}. Nous pourrons observer les différentes failles de sécurité grâce à cette première étape. Cette  démarche débutera par une analyse de ce qui peut être récupérer «passivement» par l’ordinateur, puis nous tenterons d’accéder à encore plus de données en organisant une attaque sur l’appareil test.
+		
+		Dans un deuxième temps, nous utiliserons l’expérience accumulée dans la phase «hacking» afin de créer, sûrement sous forme d’application, une façon de mieux  protéger  les  données  personnelles  contenues  sur  les  smartphones.  Notre objectif ici n’est pas de rendre le smartphone invulnérable à toute attaque, mais au  moins  d’encapsuler  les  informations  de  telle  sorte  à  ce  que  l’accès  à  celles-ci soient relativement plus compliqué pour un intrus.}
 
 \section{Organisation du projet}
 
