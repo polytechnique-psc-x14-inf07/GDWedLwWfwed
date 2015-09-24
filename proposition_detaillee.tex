@@ -13,7 +13,8 @@
 			a4paper,
 			pagenumber,
 			sectionmark,
-			twoside]{polytechnique}
+			twoside,
+			fancysections]{polytechnique}
 \usepackage[colorlinks=true,
 			linkcolor=black,%bleu303,
 			filecolor=red,
@@ -58,9 +59,9 @@ les derniers résultats sportifs de son équipe de football préférée puis con
 		
 	\subsection{État de l'art}
 	
-	Il est possible d'obtenir des données, telles que des mots de passe, via des logiciels comme \newcommand{\wireshark}{\href{https://www.wireshark.org}{WireShark}} \wireshark{} qui écoutent le réseau \wifi{} sur lequel l'appareil cible et celui qui écoute sont connectés. Avec \wireshark{} on peut écouter tous les paquets IP de l'autre utilisateur connecté au \wifi{} et on sauvegarde toute l'information qu'il transmet dans le but d'obtenir des informations de tout type. On peut exploiter certains protocoles qui transmettent des données peu ou pas cryptées et ainsi décoder les messages qu'ils véhiculent.\pagebreak[4]
+	Il est possible d'obtenir des données, telles que des mots de passe, via des logiciels comme \newcommand{\wireshark}{\href{https://www.wireshark.org}{WireShark}} \wireshark{} qui écoutent le réseau \wifi{} sur lequel l'appareil cible et celui qui écoute sont connectés. Avec \wireshark{} on peut écouter tous les paquets IP de l'autre utilisateur connecté au \wifi{} et on sauvegarde toute l'information qu'il transmet dans le but d'obtenir des informations de tout type. On peut exploiter certains protocoles qui transmettent des données peu ou pas cryptées et ainsi décoder les messages qu'ils véhiculent.%\pagebreak[4]
 	
-	Des attaques possibles sont :\nopagebreak[4]
+	Des attaques possibles sont :%\nopagebreak[4]
 	
 	\begin{itemize}\setlength{\parskip}{0pt}
 		\item DNS\footnote{Domain Name System, service permettant de traduire un nom de domaine en informations de plusieurs types qui y sont associées (adresses IP, etc.)} Poisoning : le hackeur se fait passer pour un serveur DNS. Lorsque l'utilisateur envoie une requête au serveur, il reçoit une réponse éventuellement manipulée et ne le sait pas. 
@@ -84,6 +85,7 @@ les derniers résultats sportifs de son équipe de football préférée puis con
 		
 	Dans un deuxième temps, nous utiliserons l'expérience acquise dans la phase « hacking » afin de créer, sûrement sous forme d'application, une méthode pour mieux protéger les données personnelles contenues dans les smartphones. Notre objectif ici n'est pas de rendre le smartphone invulnérable à toute attaque, mais au moins d'encapsuler les informations de telle sorte à ce que l'accès à celles-ci soient relativement plus compliqué pour un intrus.
 
+\clearpage
 \section{Organisation du projet}
 
 	\subsection{Méthode d'organisation}
@@ -161,7 +163,8 @@ les derniers résultats sportifs de son équipe de football préférée puis con
 		
 		La précision de ces échéances et de notre calendrier nous permettra au fur et à mesure de préciser nos objectifs, de les compléter ou éventuellement de les réviser, en évitant d'être dépassés par le temps ou la difficulté.
 			
-	\section{Moyens à disposition et résultats préliminaires}
+\clearpage
+\section{Moyens à disposition et résultats préliminaires}
 	
 		\subsection{Moyens nécessaires}
 
